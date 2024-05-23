@@ -3,24 +3,24 @@ import java.util.Map;
 
 public class Vertex<V> {
     private V data;
-    private Map<Vertex<V> , Double> map = new HashMap<>();
+    private Map<Vertex<V> ,Double> map = new HashMap<>();
     public V getData() {
         return data;
     }
     public Vertex(V data) {
-        this.data = data;
+        this.data =data;
     }
 
 
     public void setData(V data) {
-        this.data = data;
+        this.data =data;
     }
 
     public void addAdjacentVertex(Vertex<V> destination, Double weight) {
-        map.put(destination, weight);
+        map.put(destination,weight);
     }
 
-    public Map<Vertex<V>, Double> getAdjacentVertices() {
+    public Map<Vertex<V>, Double>getAdjacentVertices() {
         return map;
     }
 
@@ -34,9 +34,10 @@ public class Vertex<V> {
     public boolean equals(Object object) {
         if (this == object) return true;
 
-        if (object == null || getClass() != object.getClass()) return false;
+        if (object ==null||getClass()!= object.getClass())
+            return false;
 
-        Vertex<?> otherVertex = (Vertex<?>) object;
+        Vertex<?>otherVertex = (Vertex<?>) object;
 
         return data.equals(otherVertex.data);
     }

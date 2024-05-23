@@ -16,12 +16,12 @@ public class Search<V>{
     }
 
     public Iterable<V> Path_To(V value) {
-        if (hasPathTo(value) == false) {
+        if (hasPathTo(value)==false) {
             return null;
         }
 
         Stack<V> path = new Stack<>();
-        for (V i = value; i != null; i = edgeTo.get(i)) {
+        for (V i=value; i !=null; i =edgeTo.get(i)) {
             path.push(i);
         }
 
