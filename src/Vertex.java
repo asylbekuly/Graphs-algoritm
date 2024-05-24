@@ -32,12 +32,12 @@ public class Vertex<V> {
 
     @Override
     public boolean equals(Object object) {
-        if (this == object) return true;
+        if (this==object) return true;
 
-        if (object ==null||getClass()!= object.getClass())
+        if (object==null||getClass()!= object.getClass())
             return false;
 
-        Vertex<?>otherVertex = (Vertex<?>) object;
+        Vertex<?>otherVertex = (Vertex<?>)object;
 
         return data.equals(otherVertex.data);
     }

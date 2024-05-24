@@ -14,15 +14,15 @@ public class Main {
         MyGraph<String> graph = new MyGraph<>(false);
         fillWithoutWeights(graph);
 
-        System.out.println("DFS:");
-        Search<String> dfs = new DFS<>(graph, "Almaty");
-        outputPath(dfs, "Atyrau");
-
-        System.out.println("--------------------------------");
-
         System.out.println("BFS:");
         Search<String> bfs = new BFS<>(graph, "Almaty");
         outputPath(bfs, "Atyrau");
+
+        System.out.println("--------------------------------");
+
+        System.out.println("DFS:");
+        Search<String> dfs = new DFS<>(graph, "Almaty");
+        outputPath(dfs, "Atyrau");
     }
 
     public static void fillWithoutWeights(MyGraph<String> graph) {
